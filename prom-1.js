@@ -7,7 +7,7 @@ const addOne = (number, callback) => {
 
 addOne(10, (result) => console.log({ result }));
 
-/* Concat callbacks */
+/* callback hell */
 const restOne = (number, callback) => {
 	if (number <= 1) return callback('invalid number');
 
