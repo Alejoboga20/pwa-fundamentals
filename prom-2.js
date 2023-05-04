@@ -6,4 +6,7 @@ const addOne = (number) => {
 	return promise;
 };
 
-addOne(10).then((result) => addOne(result).then((result) => console.log({ result })));
+addOne(10)
+	.then(addOne)
+	.then(addOne)
+	.then((result) => console.log({ result }));
