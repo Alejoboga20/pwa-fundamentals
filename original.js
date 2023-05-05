@@ -46,3 +46,19 @@ fetch('https://reqres.in/api/users', {
 })
 	.then((resp) => resp.json())
 	.then((data) => console.log({ data }));
+
+// ==============================================
+// Ejercicio #3 - Optimization
+
+fetch('https://swapi.dev/api/people/1/')
+	.then((resp) => resp.json())
+	.then((person) =>
+		fetch('https://reqres.in/api/users', {
+			method: 'POST',
+			body: JSON.stringify({
+				name: person.name,
+			}),
+		})
+	)
+	.then((resp) => resp.json())
+	.then((data) => console.log({ data }));
