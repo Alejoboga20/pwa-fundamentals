@@ -12,7 +12,7 @@ npm -g install http-server
 2. Run `http-server` in the root directory.
 
 ```bash
-http-server -p -o 3000
+http-server -p 3000 -o
 ```
 
 3. Access the site at `http://localhost:3000`.
